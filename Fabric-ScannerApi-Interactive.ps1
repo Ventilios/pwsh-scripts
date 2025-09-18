@@ -1,5 +1,5 @@
 <#
-Power BI Scanner (Admin) – JSON + CSV export with improved column/datatype handling
+Power BI Scanner (Admin) – JSON + CSV export with option to obtain Refresh History
 Runs with your Entra ID account (interactive login), no service principal required.
 Requires: MicrosoftPowerBIMgmt (Profile/Admin modules)
 
@@ -766,7 +766,7 @@ function Export-FlatCsvs {
 # -------- [Main] --------
 # ------------------------
 Write-Host "== Power BI Scanner – Interactive ==" -ForegroundColor Cyan
-Write-Progress-Info "Starting Power BI metadata scanner with improved column/datatype handling"
+Write-Progress-Info "Starting Power BI metadata scanner"
 
 New-Folder -Path $ExportRoot
 $stamp = (Get-Date -Format "yyyyMMdd_HHmmss")
@@ -894,4 +894,5 @@ if ($script:ScanStats.ProcessingErrors.Count -gt 0) {
 
 Write-Progress-Info "=== COMPLETION ===" "Cyan"
 Write-Progress-Info "Outputs saved in: $runDir" "Green"
+
 Write-Progress-Info "Scanner completed successfully!" "Green"
