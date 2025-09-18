@@ -18,7 +18,7 @@ Primary goals:
 
 ## Requirements
 - PowerShell (Windows PowerShell or PowerShell Core / pwsh). The script runs on Windows but is compatible with pwsh.
-- Modules (Install-Module -Name MicrosoftPowerBIMgmt):
+- Modules (`Install-Module -Name MicrosoftPowerBIMgmt`):
   - `MicrosoftPowerBIMgmt.Profile` (for `Connect-PowerBIServiceAccount`)
   - `MicrosoftPowerBIMgmt.Admin` (Admin REST wrappers: listing groups, invoking admin endpoints)
 
@@ -102,3 +102,4 @@ Note: `Connect-PowerBIServiceAccount` will prompt for interactive sign-in. Run t
 - Optionally whitelist or blacklist specific workspace IDs to control scope.
 
 ---
+
