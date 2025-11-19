@@ -2,6 +2,7 @@
 Power BI Scanner (Admin) – JSON + CSV export with option to obtain Refresh History
 Runs with your Entra ID account (interactive login), no service principal required.
 Requires: MicrosoftPowerBIMgmt (Profile/Admin modules)
+Example execution: pwsh { .\Fabric-ScannerApi-Interactive.ps1 -IncludeLineage:$false -IncludeDatasetSchema:$false -IncludeDatasetExpressions:$false }
 
 References:
 - Connect-PowerBIServiceAccount (interactive sign-in) https://learn.microsoft.com/powershell/module/microsoftpowerbimgmt.profile/connect-powerbiserviceaccount
@@ -896,3 +897,4 @@ Write-Progress-Info "=== COMPLETION ===" "Cyan"
 Write-Progress-Info "Outputs saved in: $runDir" "Green"
 
 Write-Progress-Info "Scanner completed successfully!" "Green"
+
